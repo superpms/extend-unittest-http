@@ -1,0 +1,26 @@
+{
+    "name": "superpms/extend-unittest-http",
+    "description": "SuperPMS HTTP interface generation, real fetch requests and workflow assertions",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=8.2",
+        "superpms/helper-fetch": "^1.0.0",
+        "superpms/interpreter-http": "^1.0.0",
+        "superpms/interpreter-terminal": "^1.0.0"
+    },
+    "autoload": {
+        "files": [
+            "bin/autoload.php"
+        ],
+        "psr-4": {
+            "pms\\unittest\\http\\": "src/pms/unittest/http/"
+        }
+    },
+    "extra": {
+        "pms": {
+            "dir": [
+                "/utests"
+            ]
+        }
+    }
+}

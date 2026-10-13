@@ -10,6 +10,8 @@ SuperPMS 的通用 HTTP 接口测试 Composer 包，使用 helper-fetch 发起�
 - HttpTestCommand：供宿主测试流程继承，共享请求及断言统计，失败返回非零退出码。
 - Setup：自动挂载宿主 utests/config.php，并加载 utests/autoload.php。
 
+包通过 Composer 的 autoload.files 加载 bin/autoload.php，入口仅注册 TerminalLifecycleHook。宿主将包作为 Composer 依赖安装即可，不在项目 boot.json 中登记包入口；类加载使用包的 PSR-4 声明。
+
 业务接口发现、validate 读取及实际生成命令归宿主 utests。包不保存接口清单，不读取 server 业务规则，不内置 OpenAPI 凭据。
 
 ## 目录
